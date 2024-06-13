@@ -73,3 +73,8 @@ document.getElementById('scrollTocapa1').addEventListener('click', function() {
    document.getElementById('capa1').scrollIntoView({ behavior: 'smooth' });
 });
 
+
+
+function redirigir() {
+   window.location.href = 'contacta.html';
+}
