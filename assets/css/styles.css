@@ -57,8 +57,10 @@ button {
 }
 
 body {
-  background-color: var(--body-color);
+  background-image: linear-gradient(to bottom, #01204C,#01204C, #024BB2, #579DFF);
   color: var(--text-color);
+  overflow-x: hidden; /* Evita el desbordamiento horizontal en todo el body */
+
 }
 
 input,
@@ -110,19 +112,21 @@ img {
 .main_texto1{
   font-size: 70px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+
 
 }
-.main_texto2{
+.main_texto2 {
   font-size: 60px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-
+  z-index: 2; /* Asegura que este valor sea mayor que el z-index del círculo */
 }
 
 .main_texto3{
   font-size: 40px;
   margin-left: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 
 
 }
@@ -134,6 +138,7 @@ img {
   border: 2px solid rgb(255, 255, 255);
   padding: 30px 100px; /* Ajustar el padding para que el botón sea más pequeño */
   font-size: 20px;
+  z-index: 2;
 
   cursor: pointer;
   text-align: center;
@@ -171,8 +176,8 @@ img {
 
   .botonabajo {
     position: absolute;
-    top:86% !important;
-    right: 10% !important;
+    top:82% !important;
+    right: 9% !important;
     width: 55px !important;
     height: 55px !important;
 
@@ -180,8 +185,8 @@ img {
   
   .botonabajo:hover {
     position: absolute;
-    top:86% !important;
-    right: 10% !important;
+    top:82% !important;
+    right: 9% !important;
     width: 50px !important;
     height: 50px !important;
 
@@ -203,8 +208,9 @@ img {
 
 .botonabajo {
   position: absolute;
-  top:87%;
-  right: 48%;
+  top:82%;
+  right: 47%;
+
   width: 75px;
   height: 75px;
   border-radius: 50%;
@@ -221,8 +227,8 @@ img {
 
 .botonabajo:hover {
   position: absolute;
-  top:87%;
-  right: 48.1%;
+  top:82%;
+  right: 47.2%;
   width: 70px;
   height: 70px;
   background-color: rgba(255, 255, 255, 0.495);
@@ -357,9 +363,99 @@ img {
   right: 1.5rem;
 }
 
+
+
+
+
 /* Show menu */
 .show-menu {
   top: 0;
+}
+
+
+
+
+.nav__item {
+  display: inline-block;
+  margin-right: 10px;
+  position: relative; /* Para posicionar el cuadrado gris */
+  padding-bottom: 20px;
+  padding-top: 22px;
+  transition: 1;
+
+}
+.nav__item {
+  display: inline-block;
+  position: relative;
+  transition: background-color 0.3s ease; /* Transición para background-color */
+}
+
+.nav__item:hover {
+  
+  background-color: #a8a8a8; /* Color de fondo al hacer hover */
+}
+
+.nav__item:hover a{
+  color: #000;
+}
+.nav__link {
+  text-decoration: none;
+  color: #505050; /* Color del texto del enlace */
+  padding: 5px 10px;
+  display: block;
+}
+
+/* Estilos para el cuadrado gris en hover */
+.nav__item::after {
+  content: '';
+  bottom: -5px; /* Posiciona el cuadrado debajo del texto */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent; /* Color inicial del cuadrado */
+  transition: background-color 0.3s ease; /* Transición suave del color */
+}
+
+.dropdown {
+  position: absolute;
+  left: 0%;
+  width: 300%;
+  height: 280%;
+  background-color: #F5F7FF;
+  z-index: -4;
+  opacity: 0; /* Inicialmente oculto */
+  transform: translateY(-10px); /* Para la animación de desplazamiento */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+
+
+
+
+.nav__item:hover .dropdown {
+  opacity: 1; /* Mostrar el menú desplegable */
+  transform: translateY(0); /* Anima hacia abajo */
+}
+
+.dropdown a {
+  color: #000 !important; /* Color del texto del menú desplegable (negro) */
+  text-decoration: none;
+  display: block;
+  padding-top: 40px;
+  text-align: left;
+  padding-left: 11px;
+  font-size: 13px;
+}
+
+.dropdown__item:hover {
+  background-color: #f1f1f1;
+}
+
+.nav__item:hover::after {
+  background-color: #9d9d9d; /* Color del cuadrado al hacer hover */
+  position: absolute;
+  top: -100%;
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
 }
 
 /*=============== SEARCH ===============*/
@@ -528,6 +624,18 @@ img {
   }
 }
 
+
+.botonabajo {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+
 /* For large devices */
 @media screen and (min-width: 1023px) {
   .nav {
@@ -558,54 +666,499 @@ img {
 }
 
 
+
 footer {
   background: #333;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+  padding-left: 90px;
+  font-size: 15px;
+  padding-right: 90px;
+}
+
+.textofooter1 {
+  color: white;
+  flex: 1 1 100%;
   text-align: center;
-  padding: 1rem 0;
+  margin-bottom: 20px;
+}
+
+.textofooter2 {
+  color: white;
+  display: flex;
+  gap: 20px;
+  flex: 1 1 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.icon {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.icon:hover {
+  color: #ddd;
+}
+
+@media (min-width: 600px) {
+  .textofooter1 {
+      flex: 1;
+      text-align: left;
+      margin-bottom: 0;
+  }
+
+  .textofooter2 {
+      flex: 1;
+      justify-content: flex-end;
+  }
+}
+
+@media (min-width: 600px) {
+  .textofooter1 {
+      flex: 1;
+      text-align: left;
+      margin-bottom: 0;
+  }
+
+  .textofooter2 {
+      flex: 1;
+      justify-content: flex-end;
+  }
+}
+
+.circulo {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  top: 15%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  transition: 4s ease; /* Transición de 4 segundos para el cambio de background-image */
+}
+
+.circulo:hover {
+  border-radius: 10%;
+
+}
+
+
+.circulo-1 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  top: 50%;
+  right:0%;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+
+
+.circulo-2 {
+  background-image: linear-gradient(to left, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  top: 80%;
+  right:20%;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+
+
+.circulo2 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  right: 20%;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+.circulo2-1 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  left: 15%;
+  top: 75%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+.circulo2-2 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  right: 20%;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+.circulo2-3 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  right: 20%;
+  top: 10%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
+}
+
+.circulo3 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3; /* Este valor hace que el círculo esté detrás */
+
 }
 
 
 
+.contenido1 {
+  position: relative;
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 70%;
+  top: -5%;
+}
 
-.contact-form {
+.bordesuperior {
+  width: 100%;
+  height: 19%;
+  background-color: rgb(210, 210, 210);
+  text-align: center;
+  padding: 20px;
+  padding-top: 28px;
+  color: #232323;
+  font-size: 150%;
+  box-sizing: border-box;
+  
+}
+
+.contenidoPrincipal {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
-.contact-form label {
-  font-size: 18px;
-}
 
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px;
-  border: none;
-  background: #fff;
-  color: #000;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background: #f0f0f0;
-}
-
-.contact-form button:hover {
-  background: #6993cdc5;
+.texto1 {
+  width: 100%;
   color: #232323;
-  transition: background 0.3s;
+  font-size: 120%;
+  text-align: justify;
+  padding: 20px;
+}
+
+.imagen1 {
+  width: 40%;
+  text-align: center;
+  margin-bottom: 20px;
+  visibility: hidden;
+  
+}
+
+.imagen1 img {
+  width: 80%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .contenidoPrincipal {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .texto1, .imagen1 {
+    width: 50%;
+  }
+
+  .texto1 {
+    order: 1;
+  }
+
+  .imagen1 {
+    order: 2;
+  }
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+
+
+
+  .contenido1 {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contenidoPrincipal {
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+
+  .texto1 {
+    width: 56%;
+    margin-right: 5%;
+    font-size: 170%;
+    margin: 20px;
+  }
+
+  .imagen1 {
+    padding-left: 70px;
+
+    width: 50%; /* Ajusta el tamaño de la imagen según sea necesario */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+  
+    
+    visibility:visible;
+  }
+
+  .bordesuperior {
+    padding-top: 40px;
+
+    font-size: 200%;
+
+  }
+  .redondita{
+    visibility: hidden;
+  }
+    .redondita2{
+    visibility: hidden;
+    
+  }
+}
+
+
+
+.contenedor2 {
+  color: rgb(48, 48, 48);
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding-left: 10%;
+}
+
+.rect {
+  position: relative; /* Para posicionar correctamente los pseudoelementos */
+  background-color: #e0e8ff;
+  width: calc(50% - 40px); /* Ajusta el ancho según sea necesario */
+  height: 100%; /* Mantiene el 100% de la altura del contenedor */
+  margin: 20px;
+  display: flex; /* Activa el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Alinea el texto al centro */
+  transition: 0.3s;
+}
+.rect:hover {
+  position: relative; /* Para posicionar correctamente los pseudoelementos */
+  background-color: #ffffff;
+  width: calc(50% - 40px); /* Ajusta el ancho según sea necesario */
+  height: 100%; /* Mantiene el 100% de la altura del contenedor */
+  margin: 20px;
+  display: flex; /* Activa el modelo de caja flexible */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Alinea el texto al centro */
+  transition: transform 0.2s; /* Transición para el efecto de levantado */
+  transform: translateY(-10px); /* Efecto de levantado al pasar el ratón */
+  box-shadow: 0px 83px 102px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+
+}
+.rect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px; /* Ajusta esta propiedad para la separación entre rectángulos */
+  width: 100%;
+  height: 20%; /* Alto del rectángulo gris */
+  background-color: lightgray; /* Color del rectángulo gris */
+}
+
+
+
+.textuno{
+  font-size: 24px;
+  position: absolute;
+  top: 7%;
+
+
+}
+.textdos{
+  font-size: 20px;
+  position: absolute;
+  top: 15%;
+  text-align: justify;
+  padding: 30px;
+
+
+}
+.texttres{
+  font-size: 20px;
+  position: absolute;
+  top: 90%;
+  z-index: 3; /* Este valor hace que el círculo esté detrás */
+  color: #232323;
 
 }
 
 
 
+@media (max-width: 1024px) {
+  .contenedor2 {
+    width: 90%;
+    height: 56%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0;
+    align-items: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .rect {
+    background-color: white;
+    width: 95%;
+    height: 85%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  }
+  .rect:hover {
+    background-color: white;
+    width: 95%;
+    height: 85%;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    transition: none;
+    transform: none;
+    box-shadow: 0px 0px 0px rgba(255, 255, 255, 0)/* Sombra más pronunciada al pasar el ratón */
+
+  }
+  .textdos {
+    font-size: 20px;
+    position: relative; /* Use relative instead of absolute for better control */
+    top: 0; /* Reset the top property */
+    text-align: justify;
+    padding: 15px; /* Adjust padding as necessary */
+    width: 100%; /* Ensure it uses the full width of the parent container */
+  }
+  
+  .redondita{
+    position: absolute;
+    top: 73% ;
+    right: 8%;
+    padding-bottom: 3px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #7777772c;
+    background-color: #c2c2c225;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transition: 0.3s;
+    z-index: 3; /* Este valor hace que el círculo esté detrás */
+
+
+  }
+  .redondita2{
+    position: absolute;
+    left: 5%;
+    top: 73% ;
+
+    padding-bottom: 3px;
+    margin-right: 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #7777772c;
+    background-color: #c2c2c225;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    transition: 0.3s;
+    z-index: 3; /* Este valor hace que el círculo esté detrás */
+
+  }
+
+  .redondita:hover{
+
+    color: #777777e5;
+    background-color: #c2c2c2;
+
+
+  }
+  .redondita2:hover{
+
+    color: #777777;
+    background-color: #c2c2c2;
+
+
+  }
+  
+}

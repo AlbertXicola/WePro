@@ -78,3 +78,29 @@ document.getElementById('scrollTocapa1').addEventListener('click', function() {
 function redirigir() {
    window.location.href = 'contacta.html';
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+   const container = document.querySelector('.contenedor2');
+   const scrollDistance = 360; // Adjust as needed, controls how much to scroll per click
+
+   // Function to handle right arrow click
+   document.querySelectorAll('.redondita').forEach(button => {
+       button.addEventListener('click', function() {
+           container.scrollBy({
+               left: scrollDistance,
+               behavior: 'smooth'
+           });
+       });
+   });
+
+   // Function to handle left arrow click
+   document.querySelectorAll('.redondita2').forEach(button => {
+       button.addEventListener('click', function() {
+           container.scrollBy({
+               left: -scrollDistance,
+               behavior: 'smooth'
+           });
+       });
+   });
+});

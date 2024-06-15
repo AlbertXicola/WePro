@@ -9,6 +9,8 @@
 
    <!--=============== CSS ===============-->
    <link rel="stylesheet" href="assets/css/styles.css">
+      <!-- Other head elements -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
    <title>Home</title>
 </head>
@@ -16,20 +18,35 @@
    <!--==================== HEADER ====================-->
    <header class="header" id="header">
       <nav class="nav container">
-         <a href="index.html" class="nav__logo">WePro</a>
+         <a href="index.html" class="nav__logo">WebData</a>
 
          <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                <li class="nav__item">
                   <a href="servicios.html" class="nav__link">Servicios</a>
+                  <div class="dropdown">
+                     <a href="#">Servicio 1</a>
+                     <a href="#">Servicio 2</a>
+                     <a href="#">Servicio 3</a>
+                 </div>
                </li>
 
                <li class="nav__item">
                   <a href="recursos.html" class="nav__link">Recursos</a>
+                  <div class="dropdown">
+                     <a href="#">Servicio 1</a>
+                     <a href="#">Servicio 2</a>
+                     <a href="#">Servicio 3</a>
+                 </div>
                </li>
 
                <li class="nav__item">
                   <a href="contacta.html" class="nav__link">Contacta</a>
+                  <div class="dropdown">
+                     <a href="#">Servicio 1</a>
+                     <a href="#">Servicio 2</a>
+                     <a href="#">Servicio 3</a>
+                 </div>
                </li>
 
             </ul>
@@ -65,6 +82,11 @@
       <i class="ri-close-line search__close" id="search-close"></i>
    </div>
 
+
+
+
+
+   
    <!--==================== LOGIN ====================-->
    <div class="login" id="login">
       <form action="" class="login__form">
@@ -104,11 +126,21 @@
    <main class="main" id="capa1" >
       <div class="main_content">
          <div class="izquierda">
+
+
+            <div class="circulo"></div>
+            <div class="circulo-1"></div>
+            <div class="circulo-2"></div>
+
+            <div class="circulo2"></div>
+            <div class="circulo2-1"></div>
+
+
             <div class="main_texto1">
-               <p>WePro</p>
+               <p>WebData</p>
             </div>
             <div class="main_texto2">
-               <p>Mejor servicio de creación WEB </p>
+               <p>Servicio de creación WEB </p>
             </div>
             <div class="main_texto3">
                <p> totalmente personalizado</p>
@@ -122,72 +154,109 @@
 
          </div>
       </div>
-
-     <img src="assets/img/edb342a6_1.png" alt="image" class="main__bg">
-
    </main>
 
 
    <main class="main" id="capa2" >
       <div class="main_content">
-         <div class="izquierda">
-            <div class="main_texto1">
-               <p>Ejemplos</p>
+
+
+         <div class="contenido1">
+            <div class="bordesuperior">Desde WebData te ayudamos con tus objetivos</div>
+            <div class="contenidoPrincipal">
+              <div class="texto1"><p>¿Eres una <strong>pequeña o mediana empresa</strong> que busca destacar en el mundo digital? ¡Estamos aquí para ayudarte! Nos especializamos en <strong>crear sitios web totalmente personalizados</strong> que se adaptan a las necesidades específicas de tu negocio. 
+               <br><br><br>
+                  Nuestro objetivo es ayudarte a establecer una presencia en línea profesional y atractiva que refleje la esencia de tu empresa y atraiga a tus clientes potenciales, y <strong>todo a los precios más asequibles!</strong></p>
+            </div>
+              <div class="imagen1"><img src="https://sectorweb.mx/assets/img/servicio/desarrollo-web/proyectos-desarrollo-web.png?1613026814" alt=""></div>
             </div>
          </div>
-
-         <div class="izquierda">
-            <div class="main_texto1">
-               <p>Ejemplos</p>
-            </div>
-         </div>
-
+         <div class="circulo"></div>
+         <div class="circulo-1"></div>
+         <div class="circulo-2"></div>
+         <div class="circulo2-1"></div>
 
          <div>
             <button id="scrollTocapa3" class="botonabajo">&#x2193;</button>
          </div>
 
       </div>
-      <img src="assets/img/wallhaven-weogjx.jpg" alt="image" class="main__bg">
    </main>
-
-
 
    <!-- <div class="spacer"></div> -->
 
    <main class="main" id="capa3">
       <div class="main_content">
-        <div class="izquierda">
-          <div class="main_texto1">
-            <p>Formulario de Contacto</p>
-          </div>
-          <form id="contactForm" class="contact-form">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-    
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-    
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-    
-            <button class="enviarcontacta" type="submit">Enviar</button>
-          </form>
-          <div>
-            <button id="scrollTocapa1" class="botonabajo">&#x2191;</button>
-          </div>
+
+
+         <div class="contenedor2">
+            <div class="rect">
+                <button class="redondita">&#8594;</button>
+        
+                <div class="textuno">Diseño Web</div>
+                <div class="textdos">Cada negocio es único, por lo que tu sitio web también debería serlo. Creamos diseños exclusivos que capturan la esencia de tu marca</div>
+                <a href="servicios.html" class="texttres">MAS INFORMACIÓN</a>
+        
+            </div>
+            <div class="rect">
+                <button class="redondita2">&#8592;</button>
+                <button class="redondita">&#8594;</button>
+        
+                <div class="textuno">Creación Web</div>
+                <div class="textdos">Utilizamos tecnologías de vanguardia para desarrollar un sitio web que se adapte a tus necesidades específicas, ya sea una tienda en línea, un blog, o un portafolio.</div>
+                <a href="servicios.html" class="texttres">MAS INFORMACIÓN</a>
+        
+            </div>
+            <div class="rect">
+                <button class="redondita2">&#8592;</button>
+        
+                <div class="textuno">Publicación Web</div>
+                <div class="textdos">Nos encargamos de todos los aspectos técnicos del lanzamiento, asegurando una transición suave y sin problemas.</div>
+                <a href="servicios.html" class="texttres">MAS INFORMACIÓN</a>
+            </div>
         </div>
+        
+         
+
+
+
+         <div class="circulo"></div>
+         <div class="circulo-1"></div>
+         <div class="circulo2-1"></div>
+
+         <div>
+         <button id="scrollTocapa1" class="botonabajo">&#x2191;</button>
+         </div>
+
       </div>
-      <img src="assets/img/wallhaven-gj1q37.png" alt="image" class="main__bg">
+      <!--<img src="assets/img/wallhaven-gj1q37.png" alt="image" class="main__bg">-->
     </main>
+
+
+
+
     
    
    <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
    <footer>
-      <p>&copy; 2024 WePro. Todos los derechos reservados.</p>
-      
+      <div class="textofooter1">&copy; 2024 WebData. Todos los derechos reservados.</div>
+      <div class="textofooter2">
+          <div class="contact-item">
+              <a href="tel:+1234567890" class="icon"><i class="fas fa-phone"></i></a>
+              <span>+34 654-654-654</span>
+          </div>
+          <div class="contact-item">
+              <a href="https://www.instagram.com/tu_usuario" class="icon"><i class="fab fa-instagram"></i></a>
+              <span>@WebData</span>
+          </div>
+          <div class="contact-item">
+              <a href="mailto:info@tudominio.com" class="icon"><i class="fas fa-envelope"></i></a>
+              <span>info@webdata.com</span>
+          </div>
+      </div>
   </footer>
+  
 </body>
 
 </html>
