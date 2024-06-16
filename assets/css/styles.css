@@ -13,10 +13,16 @@
   --body-color: hsl(230, 100%, 98%);
   --container-color: hsl(230, 100%, 97%);
   --border-color: hsl(230, 25%, 80%);
+  --body-font: "Allerta", sans-serif;
+
 
   /*========== Font and typography ==========*/
+
+
+ 
+
+
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Syne", sans-serif;
   --h2-font-size: 1.25rem;
   --normal-font-size: .938rem;
 
@@ -754,15 +760,8 @@ footer {
   height: 350px;
   position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -1;
-  transition: 4s ease; /* Transición de 4 segundos para el cambio de background-image */
+  z-index: -3;
 }
-
-.circulo:hover {
-  border-radius: 10%;
-
-}
-
 
 .circulo-1 {
   background-image: linear-gradient(to top, #49bff2, #8e2ad1);
@@ -773,24 +772,31 @@ footer {
   height: 350px;
   position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
+  z-index: -3;
 }
-
 
 .circulo-2 {
   background-image: linear-gradient(to left, #49bff2, #8e2ad1);
   border-radius: 50%;
   top: 80%;
-  right:20%;
+  right:25%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3;
+}
+.circulo-7 {
+  background-image: linear-gradient(to left, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  top: 115%;
+  right:10%;
   width: 350px;
   height: 350px;
   position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
+  z-index: -3;
 }
-
 
 .circulo2 {
   background-image: linear-gradient(to top, #49bff2, #8e2ad1);
@@ -801,62 +807,48 @@ footer {
   height: 200px;
   position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
+  z-index: -3;
 }
+
 .circulo2-1 {
   background-image: linear-gradient(to top, #49bff2, #8e2ad1);
   border-radius: 50%;
-  left: 15%;
-  top: 75%;
+  left: 10%;
+  top: 70%;
   width: 200px;
   height: 200px;
   position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
-}
-.circulo2-2 {
-  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
-  border-radius: 50%;
-  right: 20%;
-  top: 10%;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
-}
-.circulo2-3 {
-  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
-  border-radius: 50%;
-  right: 20%;
-  top: 10%;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
+  z-index: -3;
 }
 
 .circulo3 {
   background-image: linear-gradient(to top, #49bff2, #8e2ad1);
   border-radius: 50%;
+  left: 20%;
+  top: 10%;
   width: 100px;
   height: 100px;
-  position: relative;
+  position: absolute;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  z-index: -3; /* Este valor hace que el círculo esté detrás */
-
+  z-index: -4;
 }
-
+.circulo4 {
+  background-image: linear-gradient(to top, #49bff2, #8e2ad1);
+  border-radius: 50%;
+  top: 110%;
+  left: 1%;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: -3;
+}
 
 
 .contenido1 {
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin: 20px auto;
   background-color: white;
@@ -941,7 +933,7 @@ footer {
     margin: 20px auto;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 70%;
+    height: 60%;
     align-items: center;
     justify-content: center;
   }
@@ -996,13 +988,13 @@ footer {
   display: flex;
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center; /* Centra los elementos verticalmente */
-  padding-left: 10%;
+  padding-left: 12%;
 }
 
 .rect {
   position: relative; /* Para posicionar correctamente los pseudoelementos */
   background-color: #e0e8ff;
-  width: calc(50% - 40px); /* Ajusta el ancho según sea necesario */
+  width: 50%; /* Ajusta el ancho según sea necesario */
   height: 100%; /* Mantiene el 100% de la altura del contenedor */
   margin: 20px;
   display: flex; /* Activa el modelo de caja flexible */
@@ -1010,6 +1002,7 @@ footer {
   align-items: center; /* Centra verticalmente */
   text-align: center; /* Alinea el texto al centro */
   transition: 0.3s;
+  padding-right: 7px !important;
   
 }
 
@@ -1018,7 +1011,7 @@ footer {
 .rect:hover {
   position: relative; /* Para posicionar correctamente los pseudoelementos */
   background-color: #ffffff;
-  width: calc(50% - 40px); /* Ajusta el ancho según sea necesario */
+  width: 50%; /* Ajusta el ancho según sea necesario */
   height: 100%; /* Mantiene el 100% de la altura del contenedor */
   margin: 20px;
   display: flex; /* Activa el modelo de caja flexible */
@@ -1057,6 +1050,7 @@ footer {
   top: 15%;
   text-align: justify;
   padding: 30px;
+  padding-right: 35px;
 
 
 }
@@ -1427,4 +1421,99 @@ footer {
     display: none; /* Oculta .mita1 en pantallas muy pequeñas */
   }
 }
+.content {
+  position: absolute;
+  top: 10%;
+  height: 50%;
+  width: 100%; /* Ancho completo para ocupar la pantalla */
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columnas */
+  justify-content: space-between; /* Distribuye los elementos uniformemente */
+  padding: 0 10px; /* Añade un poco de espacio alrededor de los cuadrados */
+}
 
+.row {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los cuadrados se ajusten en varias líneas */
+  justify-content: space-around; /* Distribuye los elementos horizontalmente */
+}
+
+.cuadradito {
+  position: relative;
+  height: 1000%; /* Este valor puede ser problemático, te sugiero usar un valor más realista */
+  width: 25%; /* Ajusta el ancho de cada cuadro según tu preferencia */
+  background-color: rgb(243, 239, 245);
+  margin: 15px; /* Margen entre cada cuadro */
+  display: flex; /* Convertimos el contenedor en un contenedor flex */
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.cuadradito:hover {
+  background-color: rgb(246, 246, 255);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.286); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.cuadradito::after {
+  content: ''; /* Necesario para que ::after muestre contenido */
+  position: absolute;
+  bottom: 0; /* Coloca el rectángulo gris debajo del cuadrado */
+  left: 0;
+  height: 50px; /* Altura del rectángulo gris */
+  width: 100%; /* Ancho del rectángulo gris igual al cuadrado */
+  background-color: rgb(187, 187, 187); /* Color gris */
+}
+
+.test {
+  color: #292929;
+  font-size: 20px;
+  position: absolute;
+  top: 88%;
+  z-index: 2;
+}
+
+.test1 {
+  color: #505050;
+  font-size: 18px;
+  position: absolute;
+  top: 20%;
+  z-index: 2;
+  left: 10%;
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .content {
+    top: 10%; /* Ajusta la posición superior */
+    height: 90%; /* Ajusta la altura para ocupar más espacio en pantallas pequeñas */
+    overflow-y:scroll;
+  }
+
+  .row {
+    flex-direction: column; /* Cambia la dirección a columnas en pantallas pequeñas */
+    align-items: center; /* Centra los elementos en el eje X */
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .cuadradito {
+    width: 90%; /* Ancho casi completo en pantallas pequeñas */
+    margin: 15px auto; /* Margen automático verticalmente */
+    height: 300px; /* Ajusta la altura automáticamente según el contenido */
+  }
+
+  .cuadradito:hover {
+    width: 95%; /* Ajuste al ancho completo al hacer hover */
+  }
+
+  .test1 {
+    top: 5%; /* Ajusta la posición superior del texto */
+    left: 0; /* Ajusta el alineamiento horizontal */
+    width: 100%; /* Ocupa el ancho completo */
+    text-align: center; /* Centra el texto */
+  }
+}

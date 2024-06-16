@@ -99,3 +99,12 @@ container.addEventListener('scroll', () => {
          }
       });
 });
+function parallax() {
+   const scrollPosition = window.pageYOffset;
+   document.querySelectorAll('.circulo, .circulo-1, .circulo-2, .circulo2, .circulo2-1, .circulo3, .circulo4, .circulo-7').forEach((element) => {
+       element.style.transform = 'translateY(' + scrollPosition * 0.7 + 'px)';
+   });
+}
+
+// Escuchar el evento de scroll
+window.addEventListener('scroll', parallax);
