@@ -79,10 +79,18 @@ function redirigir() {
    window.location.href = 'contacta.html';
 }
 
-
 document.addEventListener("DOMContentLoaded", function() {
    const container = document.querySelector('.contenedor2');
-   const scrollDistance = 360; // Adjust as needed, controls how much to scroll per click
+   
+   // Calculamos el porcentaje
+   const scrollPercentage = 0.97; // 30%
+
+   // Calculamos la distancia de desplazamiento en píxeles
+   const scrollDistance = container.scrollHeight * scrollPercentage;
+
+   // Ahora puedes usar scrollDistance
+   console.log(`La distancia de desplazamiento es: ${scrollDistance}px`);
+
 
    // Function to handle right arrow click
    document.querySelectorAll('.redondita').forEach(button => {
