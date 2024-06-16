@@ -9,6 +9,8 @@
 
    <!--=============== CSS ===============-->
    <link rel="stylesheet" href="assets/css/styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 
    <title>Home</title>
 </head>
@@ -123,9 +125,46 @@
 
       
    <!--==================== MAIN ====================-->
-   <main class="main" >
-   </main>
-    
+   <main class="main">
+      <div class="titulocontacta">
+         <p>Formulario de contacto</p>
+      </div>
+
+      <div class="contacta">
+
+         <div class="mita1">
+            <div class="textocontacta">Contacta</div>
+            <div class="textocontacta1">
+               ¡Empieza hoy mismo tu viaje hacia una presencia en línea poderosa y efectiva! Contáctanos para una consulta gratuita y descubre cómo podemos ayudarte a hacer crecer tu negocio con un sitio web a medida.
+            </div>
+            <div class="textocontacta2"><i class="fas fa-envelope"></i> info@bitesize.com</div>
+            <div class="textocontacta3"><i class="fas fa-phone"></i> +34 654 654 654</div>
+            <div class="social-icons">
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-youtube"></i></a>
+               <a href="#"><i class="fab fa-facebook"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+         </div>
+
+          <div class="mita2">
+            <form action="/submit-tu-formulario-aqui" method="post">
+               <input type="text" id="nombre" name="nombre"  placeholder="Nombre - Empresa" required><br><br>
+               
+               <input type="email" id="email" name="email" placeholder="Correo electrónico" required><br><br>
+
+               <input type="text" id="Asunto" name="Asunto"   placeholder="Asunto" required><br><br>
+
+               <textarea type="text" id="mensaje" name="mensaje"  row="4"  placeholder="Mensaje" required></textarea><br><br>
+               
+               <button type="submit">Enviar</button>
+           </form>
+          </div>
+
+
+
+      </div>
+  </main>
    
 
    <!--=============== MAIN JS ===============-->

@@ -1160,3 +1160,271 @@ footer {
 
   
 }
+
+
+.contacta {
+  margin-top: 7%;
+  height: 60%;
+  top: 10%;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .titulocontacta{
+    position: absolute;
+    top: 15% !important;
+  
+    font-size: 25px !important;
+    letter-spacing: 3px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .titulocontacta{
+    position: absolute;
+    top: 15% !important;
+  
+    font-size: 25px !important;
+    letter-spacing: 3px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .titulocontacta{
+    position: absolute;
+    top: 15% !important;
+  
+    font-size: 25px !important;
+    letter-spacing: 3px;
+  }
+}
+
+
+.titulocontacta{
+  position: absolute;
+  top: 15%;
+  color: #272727;
+  font-size: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: 3px;
+}
+.mita1 {
+  width: 100% !important; /* Ajusta la anchura al 100% del contenedor padre */
+  height: 110%; /* Ajusta la altura automáticamente */
+  background-color: white;
+  flex: 0 1 35%; /* Hace que .mita1 tenga una base del 35% pero sea flexible */
+  padding: 30px;
+  font-size: 19px;
+  display: flex; /* Convertimos el contenedor en un contenedor flex */
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  flex-direction: column;
+
+}
+.social-icons {
+  margin-top: 430px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333; /* Color de los íconos */
+}
+
+.textocontacta{
+  position: absolute;
+  top: 9%;
+  font-size: 24px;
+
+}
+
+.textocontacta1{
+  position: absolute;
+  top: 25%;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+
+.textocontacta2{
+  position: absolute;
+  top: 300px;
+  left: 40px;
+
+}
+
+.textocontacta3{
+  position: absolute;
+  top: 350px;
+  left: 40px;
+
+
+
+}
+
+
+
+
+.mita2 {
+  width: 75%; /* Asegura que .mita2 ocupe el espacio restante */
+  background-color: rgba(255, 255, 255, 0.322);
+  flex: 1; /* Hace que .mita2 sea flexible para ocupar el espacio restante */
+  
+  display: flex; /* Convertimos el contenedor en un contenedor flex */
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.mita2 input{
+  padding: 10px;
+  height: 35px;
+  width: 570px;
+  font-size: 17px;
+  margin: 10px;
+
+}
+.mita2 textarea[id="mensaje"] {
+  height: 120px; /* Altura del textarea */
+  padding: 10px; /* Relleno interior */
+  width: 570px; /* Ancho del textarea */
+  font-size: 17px; /* Tamaño de fuente */
+  margin: 10px; /* Margen exterior */
+  border: none; /* Sin borde */
+  resize: none; /* Deshabilita la capacidad de redimensionar */
+  outline: none; /* Elimina el contorno al hacer focus */
+}
+
+
+
+@media (max-width: 768px) {
+  .mita2 input{
+    padding: 10px;
+    height: 30px;
+    width: 250px;
+    font-size: 14px;
+    margin: 10px;
+  
+  }
+  .mita2 textarea[id="mensaje"] {
+    height: 70px; /* Altura del textarea */
+    padding: 10px; /* Relleno interior */
+    width: 250px; /* Ancho del textarea */
+    font-size: 14px; /* Tamaño de fuente */
+    margin: 10px; /* Margen exterior */
+
+  }
+  .mita2 button{
+    margin-left: 60% !important;
+    background-color: #5B89FF;
+    height: 30px;
+    font-size: 16px;
+  
+    width: 100px;
+  }
+  
+
+}
+
+@media (max-width: 480px) {
+  .mita2 input{
+    padding: 13px;
+    height: 30px;
+    width: 250px;
+    font-size: 14px;
+    margin: 10px;
+  
+  }
+  .mita2 textarea[id="mensaje"] {
+    height: 70px; /* Altura del textarea */
+    padding: 13px; /* Relleno interior */
+    width: 250px; /* Ancho del textarea */
+    font-size: 14px; /* Tamaño de fuente */
+    margin: 10px; /* Margen exterior */
+  }
+  .mita2 button{
+    margin-left: 60% !important;
+    background-color: #5B89FF;
+    height: 30px;
+    font-size: 16px;
+  
+    width: 100px;
+  }
+  
+
+}
+
+
+
+.mita2 button{
+  margin-left: 81.5%;
+  background-color: #5B89FF;
+  height: 30px;
+  font-size: 16px;
+
+  width: 100px;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  .mita2 {
+    width: 100%; /* Los hace ocupar el 100% del ancho del contenedor */
+  }
+
+  .mita1 {
+    width: 50% !important; /* Mantiene el ancho menor en modo PC */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .contacta {
+    margin-top: 7%;
+    height: 60%;
+    top: 20%;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .contacta {
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  }
+
+  .mita1, .mita2 {
+    width: 100%; /* Ambos elementos ocupan el 100% del ancho */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .contacta {
+    margin-top: 5%;
+    width: 90%;
+  }
+
+
+  .mita1 {
+    visibility: hidden;
+    display: none; /* Oculta .mita1 en pantallas muy pequeñas */
+  }
+}
+
