@@ -398,7 +398,7 @@ img {
 
 .nav__item:hover {
   
-  background-color: #a8a8a8; /* Color de fondo al hacer hover */
+  background-color: #a8a8a800; /* Color de fondo al hacer hover */
 }
 
 .nav__item:hover a{
@@ -438,10 +438,27 @@ img {
   .dropdown{
   visibility: hidden;
 }
+.nav__item {
+  display: inline-block;
+  margin-right: 0px;
+  position: relative; /* Para posicionar el cuadrado gris */
+  padding-bottom: 20px;
+  padding-top: 22px;
+  transition: 1;
+
 }
+  .nav__link {
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+  }
+  .nav__item:hover {
+    color: #024BB2;
 
-
-
+    background-color: #a8a8a8; /* Color de fondo al hacer hover */
+  }
+  
+}
 
 
 .nav__item:hover .dropdown {
@@ -464,7 +481,7 @@ img {
 }
 
 .nav__item:hover::after {
-  background-color: #9d9d9d; /* Color del cuadrado al hacer hover */
+  background-color: #b1acac00; /* Color del cuadrado al hacer hover */
   position: absolute;
   top: -100%;
   z-index: -3; /* Este valor hace que el círculo esté detrás */
@@ -669,6 +686,7 @@ img {
   .login__form {
     padding: 3rem 2rem 3.5rem;
   }
+
 }
 
 @media screen and (min-width: 1150px) {
@@ -864,8 +882,8 @@ footer {
   text-align: center;
   padding: 20px;
   padding-top: 28px;
-  color: #232323;
-  font-size: 150%;
+  color: #1a1a1a;
+  font-size: 160%;
   box-sizing: border-box;
   
 }
@@ -880,7 +898,7 @@ footer {
 .texto1 {
   width: 100%;
   color: #232323;
-  font-size: 120%;
+  font-size: 150%;
   text-align: justify;
   padding: 20px;
 }
@@ -889,8 +907,7 @@ footer {
   width: 40%;
   text-align: center;
   margin-bottom: 20px;
-  visibility: hidden;
-  
+  display: none;
 }
 
 .imagen1 img {
@@ -1077,7 +1094,6 @@ footer {
 }
 
 
-
 @media (max-width: 1024px) {
 
   .indicator {
@@ -1107,11 +1123,12 @@ footer {
     position: relative; /* Necesario para el contenedor indicador */
 }
   .contenedor2 {
+    margin-left: 10px;
     width: 90%;
     height: 56%;
     display: flex;
     justify-content: flex-start;
-    padding-left: 0px;
+    padding-left: 20px;
     align-items: center;
     overflow-x: scroll; /* Habilita el desplazamiento horizontal */
     scroll-snap-type: x mandatory; /* Habilita el scroll snap */
@@ -1119,19 +1136,24 @@ footer {
     scrollbar-width: none;  /* Firefox */
   }
 
+  .contenedor2::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
   .rect {
     background-color: white;
-    width: 95%;
+    width: 100%;
     height: 85%;
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
+    scroll-snap-align: center; /* Se centra en el elemento durante el deslizamiento */
   }
   .rect:hover {
     background-color: white;
-    width: 95%;
+    width: 100%;
     height: 85%;
     flex-shrink: 0;
     justify-content: center;
@@ -1141,7 +1163,6 @@ footer {
     transition: none;
     transform: none;
     box-shadow: 0px 0px 0px rgba(255, 255, 255, 0)/* Sombra más pronunciada al pasar el ratón */
-
   }
   .textdos {
     font-size: 20px;
@@ -1151,8 +1172,6 @@ footer {
     padding: 15px; /* Adjust padding as necessary */
     width: 100%; /* Ensure it uses the full width of the parent container */
   }
-
-  
 }
 
 
@@ -1445,17 +1464,22 @@ footer {
   position: relative;
   height: 1000%; /* Este valor puede ser problemático, te sugiero usar un valor más realista */
   width: 25%; /* Ajusta el ancho de cada cuadro según tu preferencia */
-  background-color: rgb(243, 239, 245);
+  background-color: rgb(255, 255, 255);
   margin: 15px; /* Margen entre cada cuadro */
   display: flex; /* Convertimos el contenedor en un contenedor flex */
   align-items: center;
   justify-content: center;
   transition: 0.2s;
+  filter:hue-rotate(50px); /* Aumenta el contraste en un 150% */
+
+
 }
 
 .cuadradito:hover {
-  background-color: rgb(246, 246, 255);
+  background-color: rgb(255, 255, 255);
   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.286); /* Sombra más pronunciada al pasar el ratón */
+  filter:grayscale(0%); /* Aumenta el contraste en un 150% */
+  
 }
 
 .cuadradito::after {
@@ -1483,6 +1507,8 @@ footer {
   top: 20%;
   z-index: 2;
   left: 10%;
+  padding-right: 20px;
+
 }
 
 /* Media query para pantallas pequeñas (móviles) */
@@ -1516,4 +1542,11 @@ footer {
     width: 100%; /* Ocupa el ancho completo */
     text-align: center; /* Centra el texto */
   }
+}
+
+.cuadradito img{
+  position: absolute;
+  left: 30%;
+  width: 150px !important;
+  height: 150px !important;
 }

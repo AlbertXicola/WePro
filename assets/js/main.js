@@ -108,3 +108,13 @@ function parallax() {
 
 // Escuchar el evento de scroll
 window.addEventListener('scroll', parallax);
+document.getElementById('contenedor2').addEventListener('scroll', function(e) {
+   const contenedor = e.target;
+   const scrollAmount = contenedor.scrollWidth / 3; // Ajusta el número de secciones por desplazamiento
+   const currentScroll = contenedor.scrollLeft;
+   const newScrollLeft = Math.round(currentScroll / scrollAmount) * scrollAmount;
+   
+   if (currentScroll !== newScrollLeft) {
+     contenedor.scrollLeft = newScrollLeft;
+   }
+ });
